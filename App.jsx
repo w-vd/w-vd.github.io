@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
-
+// Main App component for the GitHub Pages site
 const App = () => {
- 
+  // State to manage the currently active section (e.g., 'home', 'about')
+  // 'home' is set as the initial active section
   const [activeSection, setActiveSection] = useState('home');
 
-  
+  // Effect hook to handle initial setup or any side effects.
   useEffect(() => {
     console.log("App component mounted or activeSection changed:", activeSection);
-  }, [activeSection]);
+  }, [activeSection]); // Re-run effect if activeSection changes
+
+  // Helper function to render content based on the active section
   const renderContent = () => {
     switch (activeSection) {
       case 'home':
@@ -53,11 +56,8 @@ const App = () => {
 
   return (
     // Main container for the entire application, using Inter font
+    // Tailwind CSS and Inter font CDNs are now in index.html
     <div className="min-h-screen bg-gray-50 font-inter text-gray-900 flex flex-col">
-      {/* Tailwind CSS CDN script - IMPORTANT for styling */}
-      <script src="https://cdn.tailwindcss.com"></script>
-      {/* Inter font CDN - IMPORTANT for font styling */}
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
       {/* Navigation Bar */}
       <nav className="bg-indigo-600 p-4 shadow-lg rounded-b-xl">
@@ -114,5 +114,4 @@ const App = () => {
   );
 };
 
-export default App; 
-
+export default App; // Export the App component as default
