@@ -36,9 +36,7 @@ const App = () => {
               About Me
             </h2>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl">
-              Hello there! I'm excited to share a bit about myself.
-              I am passionate about web development, open-source projects, and continuously learning new technologies.
-              This space is dedicated to my journey, projects, and insights.
+              Welcome to my page! 
             </p>
             <p className="mt-4 text-base text-gray-600">
               I love creating user-friendly and efficient applications. Stay tuned for more updates!
